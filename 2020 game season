@@ -1,0 +1,71 @@
+#include <kipr/wombat.h>
+
+int main()
+{
+    enable_servos();
+    printf("Hello World\n");
+    //turning out of starting box
+    motor(0,50);
+    motor(2,50);
+    msleep(3000);
+    //dropping arm
+    set_servo_position(3,2047);
+    msleep(1000);
+    //turn to ramp
+    motor(0,35);
+    motor(0,0);
+    msleep(500);
+    //go
+    motor(0,50);
+    motor(2,50);
+    msleep(500);
+    //turning
+    motor(2,50);
+    motor(0,-50);
+    msleep(1500);
+    //claw up
+    set_servo_position(3,900);
+    msleep(600);
+    //line up for ramp
+    motor(2,-50);
+    motor(0,50);
+    msleep(1000);
+    motor(2,-50);
+    motor(0,50);
+    msleep(2500);
+    motor(2,50);
+    motor(0,50);
+    msleep(1500);
+    //go up ramp
+    motor(0,0);
+    motor(2,50);
+    msleep(500);
+    motor(2,50);
+    motor(0,50);
+    msleep(500);
+    motor(0,0);
+    motor(2,50);
+    msleep(500);
+    motor(2,50);
+    motor(0,50);
+    msleep(500);
+    motor(0,0);
+    motor(2,50);
+    msleep(500);
+    motor(2,50);
+    motor(0,50);
+    msleep(500);
+    motor(0,0);
+    motor(2,50);
+    msleep(500);
+    
+    
+    return 0;
+}
+   
+    
+    
+  
+   
+    
+    
